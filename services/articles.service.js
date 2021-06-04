@@ -80,5 +80,5 @@ module.exports = {
   updateArticle,
   getArticle,
   removeArticle,
-  findArticles,
+  findArticles
 };
