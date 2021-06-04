@@ -3,7 +3,7 @@ const articleService = require('../services/articles.service');
 async function getArticle(req, res, next) {
   try {
     const {
-      params: { articleId }
+      params: { articleId },
     } = req;
     const result = await articleService.getArticle(articleId);
     return res.status(200).json(result);
@@ -25,7 +25,7 @@ async function updateArticle(req, res, next) {
   try {
     const {
       params: { articleId },
-      body
+      body,
     } = req;
     const result = await articleService.updateArticle(articleId, body);
     return res.status(200).json({ data: result });
@@ -37,7 +37,7 @@ async function updateArticle(req, res, next) {
 async function removeArticle(req, res, next) {
   try {
     const {
-      params: { articleId }
+      params: { articleId },
     } = req;
     const result = await articleService.removeArticle(articleId);
     return res.status(200).json({ data: result });
@@ -61,5 +61,5 @@ module.exports = {
   updateArticle,
   getArticle,
   removeArticle,
-  findArticles
+  findArticles,
 };

@@ -3,7 +3,7 @@ const userService = require('../services/users.service');
 async function getUser(req, res, next) {
   try {
     const {
-      params: { userId }
+      params: { userId },
     } = req;
     const result = await userService.getUser(userId);
     return res.status(200).json(result);
@@ -15,7 +15,7 @@ async function getUser(req, res, next) {
 async function getUserArticles(req, res, next) {
   try {
     const {
-      params: { userId }
+      params: { userId },
     } = req;
     const result = await userService.getUserArticles(userId);
     return res.status(200).json(result);
@@ -37,7 +37,7 @@ async function updateUser(req, res, next) {
   try {
     const {
       params: { userId },
-      body
+      body,
     } = req;
     const result = await userService.updateUser(userId, body);
     return res.status(200).json(result);
@@ -49,7 +49,7 @@ async function updateUser(req, res, next) {
 async function removeUser(req, res, next) {
   try {
     const {
-      params: { userId }
+      params: { userId },
     } = req;
     const result = await userService.removeUser(userId);
     return res.status(200).json(result);
@@ -63,5 +63,5 @@ module.exports = {
   updateUser,
   getUser,
   removeUser,
-  getUserArticles
+  getUserArticles,
 };

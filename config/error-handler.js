@@ -14,7 +14,7 @@ module.exports = (app) => {
     const error = {
       code: err.code || 500,
       error: err.error,
-      message: err.message
+      message: err.message,
     };
     console.log('-----------------------------');
     console.log(error.message ? error.message : '');

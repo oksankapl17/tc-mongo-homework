@@ -11,12 +11,12 @@ const ArticleSchema = new Schema(
     category: {
       type: String,
       enum: ['sport', 'games', 'history'],
-      required: true
-    }
+      required: true,
+    },
   },
   {
-    timestamps: true
-  }
+    timestamps: true,
+  },
 );
 
 module.exports = mongoose.model('Article', ArticleSchema);

@@ -2,11 +2,11 @@ module.exports = {
   extends: 'eslint:recommended',
   env: {
     es6: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
   },
   rules: {
     'no-console': 'off',
@@ -42,6 +42,6 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-prototype-builtins': 'off',
     'no-var': 'warn',
-    'no-unused-vars': ['error', { vars: 'local' }]
-  }
+    'no-unused-vars': ['error', { vars: 'local' }],
+  },
 };
